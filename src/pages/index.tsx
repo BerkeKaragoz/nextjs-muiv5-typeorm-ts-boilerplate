@@ -25,7 +25,9 @@ const Home: NextPage = () => {
         "& > *": { mb: 2 },
       }}
     >
-      <Typography variant="h1">Next.js, Material-UI v5, Typescript</Typography>
+      <Typography variant="h1">
+        Next.js, Material-UI v5, TypeORM, Typescript
+      </Typography>
       <Button variant="contained" color="primary">
         Button
       </Button>
