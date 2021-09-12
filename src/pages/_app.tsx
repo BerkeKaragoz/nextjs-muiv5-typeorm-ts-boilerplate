@@ -6,7 +6,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import theme from "../styling/theme";
 import createEmotionCache from "../styling/createEmotionCache";
-import { ensureConnection } from "../database";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -14,14 +13,6 @@ const clientSideEmotionCache = createEmotionCache();
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
-
-ensureConnection()
-  .then((res) => {
-    console.info("Ensured database connection.", res);
-  })
-  .catch((err) => {
-    console.error("Failed the database connection!", err);
-  });
 
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;

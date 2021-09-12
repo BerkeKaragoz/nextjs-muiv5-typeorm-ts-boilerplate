@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         textAlign: "center",
         padding: 2,
         minHeight: "100vh",
-        "& > *": { mb: 2 },
+        "> *": { mb: 2 },
       }}
     >
       <Typography variant="h1">
