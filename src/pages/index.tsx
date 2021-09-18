@@ -1,4 +1,12 @@
-import { Button, Container, NoSsr, Box, Typography } from "@mui/material";
+import {
+  Button,
+  Container,
+  NoSsr,
+  Box,
+  Typography,
+  Stack,
+  Divider,
+} from "@mui/material";
 import { styled } from "@mui/system";
 import type { GetServerSideProps, NextPage } from "next";
 
@@ -22,32 +30,41 @@ const Home: NextPage = () => {
         textAlign: "center",
         padding: 2,
         minHeight: "100vh",
-        "> *": { mb: 2 },
       }}
     >
-      <Typography variant="h1">
+      <Typography variant="h1" mt={8}>
         Next.js, Material-UI v5, TypeORM, Typescript
       </Typography>
-      <Button variant="contained" color="primary">
-        Button
-      </Button>
-      <CoolerButton sx={{ mx: "auto" }}>Cooler Button</CoolerButton>
-      <Box
-        sx={{ p: 2, bgcolor: "primary.main", color: "primary.contrastText" }}
+      <Typography variant="h2" mt={4} mb={8}>
+        Boilerplate
+      </Typography>
+      <Stack
+        spacing={4}
+        divider={<Divider sx={{ width: "100%" }} />}
+        justifyContent="center"
+        alignItems="center"
       >
-        Server and Client
-      </Box>
-      <NoSsr>
+        <Button variant="contained" color="primary">
+          Button
+        </Button>
+        <CoolerButton>Cooler Button</CoolerButton>
         <Box
-          sx={{
-            p: 2,
-            bgcolor: "secondary.main",
-            color: "secondary.contrastText",
-          }}
+          sx={{ p: 2, bgcolor: "primary.main", color: "primary.contrastText" }}
         >
-          Client only
+          Server and Client
         </Box>
-      </NoSsr>
+        <NoSsr>
+          <Box
+            sx={{
+              p: 2,
+              bgcolor: "secondary.main",
+              color: "secondary.contrastText",
+            }}
+          >
+            Client only
+          </Box>
+        </NoSsr>
+      </Stack>
     </Container>
   );
 };

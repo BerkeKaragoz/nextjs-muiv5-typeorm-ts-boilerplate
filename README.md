@@ -1,3 +1,7 @@
+# Next.js, Material-UI v5, TypeORM, Typescript Boilerplate
+
+nextjs-muiv5-typeorm-ts-boilerplate
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
